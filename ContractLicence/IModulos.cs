@@ -8,7 +8,7 @@ using MetroFramework.Controls;
 namespace ContractLicence
 {
     public interface IModulos
-    {
+    { 
         string moduloTitle { get; }
         MetroUserControl moduloControl { get; }
     }
