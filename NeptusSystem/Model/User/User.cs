@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeptusSystem.Model.User
+namespace NeptusSystem.Model
 {
     public class User
     {
+        private int _idUsuario;
         private string _usuario;
         private string _password;
         private string _area;
         private string _acesso;
+
+
 
         public string Usuario
         {
@@ -35,6 +38,19 @@ namespace NeptusSystem.Model.User
         {
             get { return _acesso; }
             set { _acesso = value; }
+        }
+
+        public int IdUsuario
+        {
+            get
+            {
+                return _idUsuario;
+            }
+
+            set
+            {
+                _idUsuario = value;
+            }
         }
     }
 }

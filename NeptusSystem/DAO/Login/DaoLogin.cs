@@ -4,34 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NeptusSystem.Model;
-using NeptusSystem.Model.User;
+using NeptusSystem.Model;
+using System.Data.SqlClient;
 
-namespace NeptusSystem.DAO.Login
+namespace NeptusSystem.DAO
 {
-    class DaoLogin
+    public class DaoLogin
     {
-        public void Login(User user, out bool status)
+        public object Dbfactory { get; private set; }
+
+        public void ReturnUser(string user)
         {
+            DBFactory factory = new DBFactory();
 
-            status = true;
+            SqlConnection conn = factory.Conection();
+            SqlCommand command = conn.CreateCommand();
+
+            command.CommandText = @"SELECT NPTIDLOGIN, NPTUSUARIO , NPTPASSWORD , NPTAREA , NPTACESSO FROM NPTLOGIN WHERE NPTUSUARIO = @user";
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@user";
+
+
+
         }
-
-        public void SessionLogin(User user)
-        {
+        public void Login() { }
 
 
-            Session.Session session = new Session.Session();
-            
-            session.SessionUser = user.Usuario;
-            session.SessionPassword = user.Password;
-            session.SessionStart = DateTime.Now;
-        }
-
-        public bool ValidateLogin()
-        {
-            return true;
-        }
-
-        
     }
 }

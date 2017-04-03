@@ -1,6 +1,6 @@
-﻿namespace NeptusSystem
+﻿namespace NeptusSystem.Modules.ModulesForms
 {
-    partial class Form1
+    partial class ModuleForms
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ucModulesForms = new MetroFramework.Controls.MetroUserControl();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // ucModulesForms
             // 
-            this.progressBar1.Location = new System.Drawing.Point(37, 400);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(746, 10);
-            this.progressBar1.TabIndex = 0;
+            this.ucModulesForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucModulesForms.Location = new System.Drawing.Point(0, 0);
+            this.ucModulesForms.Name = "ucModulesForms";
+            this.ucModulesForms.Size = new System.Drawing.Size(470, 700);
+            this.ucModulesForms.TabIndex = 0;
+            this.ucModulesForms.UseSelectable = true;
             // 
-            // Form1
+            // ModuleForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 489);
-            this.Controls.Add(this.progressBar1);
-            this.Name = "Form1";
-            this.Text = "Neptus System";
+            this.ClientSize = new System.Drawing.Size(470, 700);
+            this.Controls.Add(this.ucModulesForms);
+            this.Name = "ModuleForms";
+            this.Text = "ModuleForms";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private MetroFramework.Controls.MetroUserControl ucModulesForms;
     }
 }
-
