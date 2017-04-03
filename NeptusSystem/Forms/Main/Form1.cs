@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NeptusSystem.Modules.ModulesForms
+namespace NeptusSystem
 {
-    public partial class ModuleForms : Form
+    public partial class Form1 : Form
     {
-        public ModuleForms()
+        public Form1()
         {
             InitializeComponent();
         }
+
     }
 }

@@ -29,6 +29,7 @@ namespace NeptusSystem.Session
 
 
         private string _sessionUser;
+        private string _sessionPassword;
         private string _sessionAcesso;
         private string _sessionArea;
         private DateTime _sessionStart;
@@ -46,7 +47,20 @@ namespace NeptusSystem.Session
                 _sessionUser = value;
             }
         }
-        
+
+        public string SessionPassword
+        {
+            get
+            {
+                return _sessionPassword;
+            }
+
+            set
+            {
+                _sessionPassword = value;
+            }
+        }
+
         public DateTime SessionStart
         {
             get

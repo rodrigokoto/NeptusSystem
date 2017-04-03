@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NeptusSystem.Forms.Login;
-using NeptusSystem.Forms.Main;
 
 namespace NeptusSystem
 {
@@ -18,15 +16,7 @@ namespace NeptusSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Login lg = new Login();
-            
-            if (lg.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(new Main());
-            }
-
-            
+            Application.Run(new Form1());
         }
     }
 }
