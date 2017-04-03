@@ -8,35 +8,25 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
 
-namespace NeptusSystem.DAO.Factory
+namespace NeptusSystem.DAO
 {
-    public class DBFactory 
+    public class DBFactory
     {
         public DBFactory() { }
 
-
-        public class Conexao
-        {
-            private OleDbConnection _conn;
-            private OleDbCommand _command;
-            private static string _conexao = ConfigurationManager.ConnectionStrings["NeptusConection"].ConnectionString;
-
-
-
-            private SqlConnection OpenConnection()
-            {
-                SqlConnection conn = new SqlConnection(_conexao);
-                conn.Open();
-
-                return conn;
-            }
-            
-            public void Close()
-            {
-
-            }
-        }
+        private static string _conexao = ConfigurationManager.ConnectionStrings["NeptusConection"].ConnectionString;
         
+        public SqlConnection Conection()
+        {
+            SqlConnection conn = new SqlConnection(_conexao);
+
+            conn.Open();
+            
+            return conn;
+        }
+
+
+
 
     }
 }

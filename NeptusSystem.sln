@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeptusSystem", "NeptusSystem\NeptusSystem.csproj", "{D196EA4E-A3C1-419C-8B42-748B404F88E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeptusSystemModules", "NeptusSystemModules\NeptusSystemModules.csproj", "{FD1584AC-4612-437A-BF01-C136BB31E3DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractLicence", "ContractLicence\ContractLicence.csproj", "{384310F8-FD71-4356-B5A0-14E2C197B4CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D196EA4E-A3C1-419C-8B42-748B404F88E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D196EA4E-A3C1-419C-8B42-748B404F88E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D196EA4E-A3C1-419C-8B42-748B404F88E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1584AC-4612-437A-BF01-C136BB31E3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1584AC-4612-437A-BF01-C136BB31E3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1584AC-4612-437A-BF01-C136BB31E3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1584AC-4612-437A-BF01-C136BB31E3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384310F8-FD71-4356-B5A0-14E2C197B4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384310F8-FD71-4356-B5A0-14E2C197B4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384310F8-FD71-4356-B5A0-14E2C197B4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384310F8-FD71-4356-B5A0-14E2C197B4CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
