@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeptusSystem.Util.Enum
+namespace ContractLicence
 {
     public enum Area
     {
-        Administracao = 0, 
-        Gerencia = 1 , 
-        Portaria = 2 , 
-        RH = 3, 
+        Administracao = 0,
+        Gerencia = 1,
+        Portaria = 2,
+        RH = 3,
         Seguranca = 4,
         Financeiro = 5
     }

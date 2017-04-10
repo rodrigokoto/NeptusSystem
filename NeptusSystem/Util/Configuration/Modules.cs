@@ -8,19 +8,21 @@ namespace NeptusSystem.Util.Configuration
 {
     public class Modules
     {
-        public void ObterModulos(string acesso, Util.Enum.Area area)
+        public void ObterModulos(string acesso, ContractLicence.Area area)
         {
             switch (area)
             {
-                case Enum.Area.Administracao:
+                case ContractLicence.Area.Administracao:
                     break;
-                case Enum.Area.Gerencia:
+                case ContractLicence.Area.Gerencia:
                     break;
-                case Enum.Area.Portaria:
+                case ContractLicence.Area.Portaria:
                     break;
-                case Enum.Area.RH:
+                case ContractLicence.Area.RH:
                     break;
-                case Enum.Area.Seguranca:
+                case ContractLicence.Area.Seguranca:
+                    break;
+                case ContractLicence.Area.Financeiro:
                     break;
                 default:
                     break;

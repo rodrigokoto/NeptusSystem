@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ContractLicence;
 
 namespace NeptusSystem.Session
 {
@@ -30,7 +31,7 @@ namespace NeptusSystem.Session
 
         private string _sessionUser;
         private string _sessionAcesso;
-        private string _sessionArea;
+        private ContractLicence.Area _sessionArea;
         private DateTime _sessionStart;
 
        
@@ -60,18 +61,7 @@ namespace NeptusSystem.Session
             }
         }
 
-        public string SessionArea
-        {
-            get
-            {
-                return _sessionArea;
-            }
-
-            set
-            {
-                _sessionArea = value;
-            }
-        }
+      
 
         public string SessionAcesso
         {
@@ -83,6 +73,19 @@ namespace NeptusSystem.Session
             set
             {
                 _sessionAcesso = value;
+            }
+        }
+
+        public Area SessionArea
+        {
+            get
+            {
+                return _sessionArea;
+            }
+
+            set
+            {
+                _sessionArea = value;
             }
         }
     }

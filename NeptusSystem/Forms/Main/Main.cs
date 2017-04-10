@@ -11,14 +11,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ContractLicence;
 
 
 namespace NeptusSystem.Forms.Main
 {
-    public partial class Main : Form
+    public partial class Main : MetroFramework.Forms.MetroForm
     {
-        Dictionary<string, MetroFramework.Controls.MetroUserControl> dicControls = new Dictionary<string, MetroFramework.Controls.MetroUserControl>();
-        
+        List<IModulos> lstModulo = new List<IModulos>();
+        private Session.Session session = Session.Session.Instance;
+
         public Main()
         {
             var catalog = new AggregateCatalog(
@@ -27,8 +29,8 @@ namespace NeptusSystem.Forms.Main
             var container = new CompositionContainer(catalog);
             var menu = new NeptusSystem.Model.Menu.Menu();
             container.ComposeParts(menu);
-            dicControls = menu.RetornaComponentesMenu();
-            
+            lstModulo = menu.ReturnModules();
+
             InitializeComponent();
         }
 
@@ -37,14 +39,13 @@ namespace NeptusSystem.Forms.Main
             base.OnLoad(e);
             MontarMenu();
             CarregarSession();
-
         }
 
-        private Session.Session session = Session.Session.Instance;
+        
 
         private void CarregarSession()
         {
-            lblUsuario.Text = session.SessionUser;
+            //lblUsuario.Text = session.SessionUser;
 
         }
 
@@ -53,44 +54,80 @@ namespace NeptusSystem.Forms.Main
 
         }
 
-        
+
 
         private void MontarMenu()
         {
-            LinkLabel lblmenuitem = new LinkLabel();
-            
-            foreach (var item in dicControls)
-            {
 
-                MetroFramework.Controls.MetroUserControl controle =  item.Value;
-                lblmenuitem.Text = item.Key;
-                lblmenuitem.Name = "lbl" + item.Key;
-                lblmenuitem.Click += delegate(object sender , EventArgs e) { AbrirUsercontrol(sender, e, item.Value); };
+            switch (ContractLicence.Area)
+            {
+                case Area.Administracao:
+                    break;
+                case Area.Gerencia:
+                    break;
+                case Area.Portaria:
+                    break;
+                case Area.RH:
+                    break;
+                case Area.Seguranca:
+                    break;
+                case Area.Financeiro:
+                    break;
+                default:
+                    break;
             }
 
-            pnlMenu.Controls.Add(lblmenuitem);
+            for (int i = 0; i < lstModulo.Count; i++)
+            {
+                Label lblmodulo = new Label();
+                lblmodulo.Text = lstModulo[i].moduloTitle;
+                pnlMenu.Controls.Add(lblmodulo);
+            }
+            //MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile();
+
+            //LinkLabel lblmenuitem = new LinkLabel();
+
+            //foreach (var item in dicControls)
+            //{
+            //    System.Drawing.Size size = new Size(235, 39);
+            //    tile.Text = item.Key;
+            //    tile.Name = "tl" + item.Key;
+            //    tile.UseTileImage = true;
+            //    tile.Size = size;
+            //    tile.TextAlign = ContentAlignment.MiddleCenter;
+            //    tile.Click += delegate (object sender, EventArgs e) { AbrirUsercontrol(sender, e, item.Value); };
+
+            //}
+
+
         }
 
-        
-            
-        private void AbrirUsercontrol(object sender , EventArgs e,  MetroFramework.Controls.MetroUserControl controle)
+
+
+        private void AbrirUsercontrol(object sender, EventArgs e, MetroFramework.Controls.MetroUserControl controle)
         {
             pnlMainContent.Controls.Clear();
             pnlMainContent.Controls.Add(controle);
         }
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox1.BackColor = Color.Aqua;
-        }
 
         private void PopularMenu()
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            ctmConfig.Show(btnConfig, btnConfig.Location.X, btnConfig.Location.Y + pnlConfig.Height);
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Sobre().Show();
         }
     }
 }

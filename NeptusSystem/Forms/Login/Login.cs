@@ -49,7 +49,7 @@ namespace NeptusSystem.Forms.Login
 
         private void popularArea()
         {
-            cmbArea.DataSource = Enum.GetValues(typeof(Util.Enum.Area));
+            cmbArea.DataSource = Enum.GetValues(typeof(ContractLicence.Area));
         }
 
         #region Sistema
@@ -167,7 +167,7 @@ namespace NeptusSystem.Forms.Login
             Session.Session session = Session.Session.Instance;
 
             session.SessionAcesso = user.Acesso;
-            session.SessionArea = user.Area;
+            //session.SessionArea = 
             session.SessionUser = user.Usuario;
             session.SessionStart = DateTime.Now;
         }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NeptusSystem.Modules.ModulesForms
+namespace NeptusSystem.Forms.Main
 {
-    public partial class ModuleForms : Form
+    public partial class Sobre : MetroFramework.Forms.MetroForm
     {
-        public ModuleForms()
+        public Sobre()
         {
             InitializeComponent();
         }

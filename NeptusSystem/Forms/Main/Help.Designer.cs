@@ -1,6 +1,6 @@
-﻿namespace NeptusSystem.Modules.Modelo.ModulesFoms
+﻿namespace NeptusSystem.Forms.Main
 {
-    partial class ModelModuleForms
+    partial class Help
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlControlMain = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // pnlControlMain
-            // 
-            this.pnlControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlControlMain.Name = "pnlControlMain";
-            this.pnlControlMain.Size = new System.Drawing.Size(445, 715);
-            this.pnlControlMain.TabIndex = 0;
-            // 
-            // ModelModuleForms
+            // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 715);
-            this.Controls.Add(this.pnlControlMain);
-            this.Name = "ModelModuleForms";
-            this.Text = "ModelModuleForms";
+            this.ClientSize = new System.Drawing.Size(645, 676);
+            this.Name = "Help";
+            this.Text = "Help";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlControlMain;
     }
 }
