@@ -41,7 +41,7 @@ namespace NeptusSystemModules.Modules.Financeiro
         {
             get
             {
-                return "Financeiro";
+                return "Fornecedores";
             }
         }
     }

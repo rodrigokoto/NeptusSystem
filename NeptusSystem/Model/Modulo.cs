@@ -13,7 +13,7 @@ namespace NeptusSystem.Model
     {
         public Bitmap img
         {
-            get;set;
+            get;set;   
                     }
 
         public Area moduloArea

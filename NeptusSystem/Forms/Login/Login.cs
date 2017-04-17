@@ -72,7 +72,7 @@ namespace NeptusSystem.Forms.Login
                 {
                     if (user.Password == txtPassword.Text)
                     {
-                        if (user.Area.ToLower() == cmbArea.Text.ToLower())
+                        if (user.Area.ToString().ToLower() == cmbArea.Text.ToLower())
                         {
                             CriarSession(user);
                             this.DialogResult = DialogResult.OK;
@@ -167,7 +167,7 @@ namespace NeptusSystem.Forms.Login
             Session.Session session = Session.Session.Instance;
 
             session.SessionAcesso = user.Acesso;
-            //session.SessionArea = 
+            session.SessionArea = user.Area;
             session.SessionUser = user.Usuario;
             session.SessionStart = DateTime.Now;
         }

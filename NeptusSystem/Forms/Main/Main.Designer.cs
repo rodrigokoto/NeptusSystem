@@ -28,354 +28,441 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pnlHeaderMain = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnHome = new System.Windows.Forms.PictureBox();
-            this.pnlMarginHeader = new System.Windows.Forms.Panel();
-            this.pnlConfig = new System.Windows.Forms.Panel();
-            this.btnConfig = new System.Windows.Forms.PictureBox();
-            this.ctmConfig = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContentPosition = new System.Windows.Forms.Panel();
-            this.pnlMainContent = new System.Windows.Forms.Panel();
-            this.pnlNavigation = new System.Windows.Forms.Panel();
-            this.pnlMenuContent = new System.Windows.Forms.Panel();
-            this.pnlSearchContent = new System.Windows.Forms.Panel();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
-            this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlContainer = new NeptusSystem.Util.NeptusControls.ShadowPanel();
+            this.shadowPanel1 = new NeptusSystem.Util.NeptusControls.ShadowPanel();
+            this.pnlModulo = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblModulos = new System.Windows.Forms.Label();
+            this.pnlPrincipalMenu = new System.Windows.Forms.Panel();
+            this.btnHelp = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnConfig = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnRelatorios = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHome = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pnlHeadPrincipal = new System.Windows.Forms.Panel();
+            this.lblPrincipal = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
-            this.pnlHeaderMain.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            this.pnlConfig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
-            this.ctmConfig.SuspendLayout();
-            this.pnlContentPosition.SuspendLayout();
-            this.pnlMenuContent.SuspendLayout();
-            this.pnlSearchContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.shadowPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlPrincipalMenu.SuspendLayout();
+            this.pnlHeadPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 115);
-            this.panel1.TabIndex = 4;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.pnlHeader.Controls.Add(this.panel3);
+            this.pnlHeader.Controls.Add(this.pictureBox4);
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1299, 45);
+            this.pnlHeader.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(919, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(380, 45);
+            this.panel3.TabIndex = 6;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.Image = global::NeptusSystem.Properties.Resources.close_white;
+            this.btnClose.Location = new System.Drawing.Point(328, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(52, 45);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // bunifuMaterialTextbox1
+            // 
+            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Silver;
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox1.HintText = "";
+            this.bunifuMaterialTextbox1.isPassword = false;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuMaterialTextbox1.LineThickness = 3;
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(26, 12);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(256, 28);
+            this.bunifuMaterialTextbox1.TabIndex = 0;
+            this.bunifuMaterialTextbox1.Text = "Pesquisar";
+            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::NeptusSystem.Properties.Resources.search;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::NeptusSystem.Properties.Resources.menu_alt;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 68);
+            this.label1.Location = new System.Drawing.Point(42, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Neptus System";
+            this.label1.Size = new System.Drawing.Size(171, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Dashboard Neptus";
             // 
-            // pictureBox1
+            // pnlContainer
             // 
-            this.pictureBox1.Image = global::NeptusSystem.Properties.Resources.logo_neptus;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlContainer.BorderColor = System.Drawing.Color.Empty;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(244, 45);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.PanelColor = System.Drawing.Color.White;
+            this.pnlContainer.Size = new System.Drawing.Size(1055, 776);
+            this.pnlContainer.TabIndex = 6;
             // 
-            // pnlHeader
+            // shadowPanel1
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
-            this.pnlHeader.Controls.Add(this.pnlHeaderMain);
-            this.pnlHeader.Controls.Add(this.pnlConfig);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(238, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1021, 47);
-            this.pnlHeader.TabIndex = 1;
+            this.shadowPanel1.BackColor = System.Drawing.Color.White;
+            this.shadowPanel1.BorderColor = System.Drawing.Color.Empty;
+            this.shadowPanel1.Controls.Add(this.pnlModulo);
+            this.shadowPanel1.Controls.Add(this.panel2);
+            this.shadowPanel1.Controls.Add(this.pnlPrincipalMenu);
+            this.shadowPanel1.Controls.Add(this.pnlHeadPrincipal);
+            this.shadowPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.shadowPanel1.Location = new System.Drawing.Point(0, 45);
+            this.shadowPanel1.Name = "shadowPanel1";
+            this.shadowPanel1.PanelColor = System.Drawing.Color.Empty;
+            this.shadowPanel1.Size = new System.Drawing.Size(244, 776);
+            this.shadowPanel1.TabIndex = 5;
             // 
-            // pnlHeaderMain
+            // pnlModulo
             // 
-            this.pnlHeaderMain.Controls.Add(this.panel3);
-            this.pnlHeaderMain.Controls.Add(this.pnlMarginHeader);
-            this.pnlHeaderMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHeaderMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeaderMain.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlHeaderMain.Name = "pnlHeaderMain";
-            this.pnlHeaderMain.Size = new System.Drawing.Size(821, 47);
-            this.pnlHeaderMain.TabIndex = 1;
+            this.pnlModulo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlModulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlModulo.Location = new System.Drawing.Point(0, 286);
+            this.pnlModulo.Name = "pnlModulo";
+            this.pnlModulo.Size = new System.Drawing.Size(244, 490);
+            this.pnlModulo.TabIndex = 6;
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.btnHome);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(111, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(710, 47);
-            this.panel3.TabIndex = 2;
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.lblModulos);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Location = new System.Drawing.Point(0, 251);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(244, 35);
+            this.panel2.TabIndex = 5;
             // 
-            // pictureBox2
+            // lblModulos
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::NeptusSystem.Properties.Resources.bars_chart;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 47);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.lblModulos.AutoSize = true;
+            this.lblModulos.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblModulos.ForeColor = System.Drawing.Color.White;
+            this.lblModulos.Location = new System.Drawing.Point(12, 11);
+            this.lblModulos.Name = "lblModulos";
+            this.lblModulos.Size = new System.Drawing.Size(75, 21);
+            this.lblModulos.TabIndex = 0;
+            this.lblModulos.Text = "Modulos";
             // 
-            // btnHome
+            // pnlPrincipalMenu
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHome.Image = global::NeptusSystem.Properties.Resources.home_color;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(48, 47);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnHome.TabIndex = 0;
-            this.btnHome.TabStop = false;
+            this.pnlPrincipalMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPrincipalMenu.Controls.Add(this.btnHelp);
+            this.pnlPrincipalMenu.Controls.Add(this.btnInfo);
+            this.pnlPrincipalMenu.Controls.Add(this.btnConfig);
+            this.pnlPrincipalMenu.Controls.Add(this.btnRelatorios);
+            this.pnlPrincipalMenu.Controls.Add(this.btnHome);
+            this.pnlPrincipalMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPrincipalMenu.Location = new System.Drawing.Point(0, 35);
+            this.pnlPrincipalMenu.Name = "pnlPrincipalMenu";
+            this.pnlPrincipalMenu.Size = new System.Drawing.Size(244, 216);
+            this.pnlPrincipalMenu.TabIndex = 4;
             // 
-            // pnlMarginHeader
+            // btnHelp
             // 
-            this.pnlMarginHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.pnlMarginHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMarginHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlMarginHeader.Name = "pnlMarginHeader";
-            this.pnlMarginHeader.Size = new System.Drawing.Size(111, 47);
-            this.pnlMarginHeader.TabIndex = 0;
+            this.btnHelp.Activecolor = System.Drawing.Color.Gray;
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHelp.BorderRadius = 0;
+            this.btnHelp.ButtonText = "   Ajuda";
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHelp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHelp.Iconimage = global::NeptusSystem.Properties.Resources.question;
+            this.btnHelp.Iconimage_right = null;
+            this.btnHelp.Iconimage_right_Selected = null;
+            this.btnHelp.Iconimage_Selected = null;
+            this.btnHelp.IconMarginLeft = 0;
+            this.btnHelp.IconMarginRight = 0;
+            this.btnHelp.IconRightVisible = true;
+            this.btnHelp.IconRightZoom = 0D;
+            this.btnHelp.IconVisible = true;
+            this.btnHelp.IconZoom = 30D;
+            this.btnHelp.IsTab = false;
+            this.btnHelp.Location = new System.Drawing.Point(0, 168);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnHelp.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnHelp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHelp.selected = false;
+            this.btnHelp.Size = new System.Drawing.Size(244, 42);
+            this.btnHelp.TabIndex = 4;
+            this.btnHelp.Text = "   Ajuda";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHelp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // pnlConfig
+            // btnInfo
             // 
-            this.pnlConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.pnlConfig.Controls.Add(this.btnConfig);
-            this.pnlConfig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlConfig.Location = new System.Drawing.Point(821, 0);
-            this.pnlConfig.Name = "pnlConfig";
-            this.pnlConfig.Size = new System.Drawing.Size(200, 47);
-            this.pnlConfig.TabIndex = 0;
+            this.btnInfo.Activecolor = System.Drawing.Color.Gray;
+            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInfo.BorderRadius = 0;
+            this.btnInfo.ButtonText = "   Sobre";
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnInfo.Iconimage = global::NeptusSystem.Properties.Resources.info;
+            this.btnInfo.Iconimage_right = null;
+            this.btnInfo.Iconimage_right_Selected = null;
+            this.btnInfo.Iconimage_Selected = null;
+            this.btnInfo.IconMarginLeft = 0;
+            this.btnInfo.IconMarginRight = 0;
+            this.btnInfo.IconRightVisible = true;
+            this.btnInfo.IconRightZoom = 0D;
+            this.btnInfo.IconVisible = true;
+            this.btnInfo.IconZoom = 30D;
+            this.btnInfo.IsTab = false;
+            this.btnInfo.Location = new System.Drawing.Point(0, 126);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnInfo.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnInfo.selected = false;
+            this.btnInfo.Size = new System.Drawing.Size(244, 42);
+            this.btnInfo.TabIndex = 3;
+            this.btnInfo.Text = "   Sobre";
+            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnConfig
             // 
+            this.btnConfig.Activecolor = System.Drawing.Color.Gray;
             this.btnConfig.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfig.ContextMenuStrip = this.ctmConfig;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfig.BorderRadius = 0;
+            this.btnConfig.ButtonText = "   Configuração";
             this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnConfig.Image = global::NeptusSystem.Properties.Resources.setting_24px;
-            this.btnConfig.Location = new System.Drawing.Point(156, 0);
+            this.btnConfig.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfig.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnConfig.Iconimage = global::NeptusSystem.Properties.Resources.setting_24px;
+            this.btnConfig.Iconimage_right = null;
+            this.btnConfig.Iconimage_right_Selected = null;
+            this.btnConfig.Iconimage_Selected = null;
+            this.btnConfig.IconMarginLeft = 0;
+            this.btnConfig.IconMarginRight = 0;
+            this.btnConfig.IconRightVisible = true;
+            this.btnConfig.IconRightZoom = 0D;
+            this.btnConfig.IconVisible = true;
+            this.btnConfig.IconZoom = 30D;
+            this.btnConfig.IsTab = false;
+            this.btnConfig.Location = new System.Drawing.Point(0, 84);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(44, 47);
-            this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnConfig.TabIndex = 0;
-            this.btnConfig.TabStop = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            this.btnConfig.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnConfig.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnConfig.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnConfig.selected = false;
+            this.btnConfig.Size = new System.Drawing.Size(244, 42);
+            this.btnConfig.TabIndex = 2;
+            this.btnConfig.Text = "   Configuração";
+            this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfig.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConfig.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // ctmConfig
+            // btnRelatorios
             // 
-            this.ctmConfig.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.ctmConfig.AllowDrop = true;
-            this.ctmConfig.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraçõesToolStripMenuItem,
-            this.sobreToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.ajudaToolStripMenuItem});
-            this.ctmConfig.Name = "ctmConfig";
-            this.ctmConfig.Size = new System.Drawing.Size(152, 76);
+            this.btnRelatorios.Activecolor = System.Drawing.Color.Gray;
+            this.btnRelatorios.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatorios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRelatorios.BorderRadius = 0;
+            this.btnRelatorios.ButtonText = "   Relatórios";
+            this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRelatorios.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnRelatorios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRelatorios.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRelatorios.Iconimage = global::NeptusSystem.Properties.Resources.bars_chart;
+            this.btnRelatorios.Iconimage_right = null;
+            this.btnRelatorios.Iconimage_right_Selected = null;
+            this.btnRelatorios.Iconimage_Selected = null;
+            this.btnRelatorios.IconMarginLeft = 0;
+            this.btnRelatorios.IconMarginRight = 0;
+            this.btnRelatorios.IconRightVisible = true;
+            this.btnRelatorios.IconRightZoom = 0D;
+            this.btnRelatorios.IconVisible = true;
+            this.btnRelatorios.IconZoom = 30D;
+            this.btnRelatorios.IsTab = false;
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 42);
+            this.btnRelatorios.Name = "btnRelatorios";
+            this.btnRelatorios.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnRelatorios.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnRelatorios.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRelatorios.selected = false;
+            this.btnRelatorios.Size = new System.Drawing.Size(244, 42);
+            this.btnRelatorios.TabIndex = 1;
+            this.btnRelatorios.Text = "   Relatórios";
+            this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelatorios.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRelatorios.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // configuraçõesToolStripMenuItem
+            // btnHome
             // 
-            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            this.btnHome.Activecolor = System.Drawing.Color.DimGray;
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.BorderRadius = 0;
+            this.btnHome.ButtonText = "    Home";
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.DisabledColor = System.Drawing.Color.DimGray;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHome.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHome.Iconimage")));
+            this.btnHome.Iconimage_right = null;
+            this.btnHome.Iconimage_right_Selected = null;
+            this.btnHome.Iconimage_Selected = null;
+            this.btnHome.IconMarginLeft = 0;
+            this.btnHome.IconMarginRight = 0;
+            this.btnHome.IconRightVisible = true;
+            this.btnHome.IconRightZoom = 0D;
+            this.btnHome.IconVisible = true;
+            this.btnHome.IconZoom = 30D;
+            this.btnHome.IsTab = false;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnHome.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnHome.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHome.selected = true;
+            this.btnHome.Size = new System.Drawing.Size(244, 42);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "    Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHome.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // sobreToolStripMenuItem
+            // pnlHeadPrincipal
             // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
+            this.pnlHeadPrincipal.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlHeadPrincipal.Controls.Add(this.lblPrincipal);
+            this.pnlHeadPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeadPrincipal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlHeadPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeadPrincipal.Name = "pnlHeadPrincipal";
+            this.pnlHeadPrincipal.Size = new System.Drawing.Size(244, 35);
+            this.pnlHeadPrincipal.TabIndex = 2;
             // 
-            // toolStripSeparator1
+            // lblPrincipal
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(148, 6);
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            // 
-            // pnlContentPosition
-            // 
-            this.pnlContentPosition.BackColor = System.Drawing.Color.White;
-            this.pnlContentPosition.Controls.Add(this.pnlMainContent);
-            this.pnlContentPosition.Controls.Add(this.pnlNavigation);
-            this.pnlContentPosition.Controls.Add(this.pnlHeader);
-            this.pnlContentPosition.Controls.Add(this.pnlMenuContent);
-            this.pnlContentPosition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContentPosition.Location = new System.Drawing.Point(20, 30);
-            this.pnlContentPosition.Name = "pnlContentPosition";
-            this.pnlContentPosition.Size = new System.Drawing.Size(1259, 771);
-            this.pnlContentPosition.TabIndex = 2;
-            // 
-            // pnlMainContent
-            // 
-            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(238, 176);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(1021, 595);
-            this.pnlMainContent.TabIndex = 4;
-            // 
-            // pnlNavigation
-            // 
-            this.pnlNavigation.BackColor = System.Drawing.Color.Silver;
-            this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNavigation.Location = new System.Drawing.Point(238, 47);
-            this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(1021, 129);
-            this.pnlNavigation.TabIndex = 3;
-            // 
-            // pnlMenuContent
-            // 
-            this.pnlMenuContent.Controls.Add(this.pnlMenu);
-            this.pnlMenuContent.Controls.Add(this.pnlSearchContent);
-            this.pnlMenuContent.Controls.Add(this.panel1);
-            this.pnlMenuContent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenuContent.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenuContent.Name = "pnlMenuContent";
-            this.pnlMenuContent.Size = new System.Drawing.Size(238, 771);
-            this.pnlMenuContent.TabIndex = 2;
-            // 
-            // pnlSearchContent
-            // 
-            this.pnlSearchContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(178)))), ((int)(((byte)(228)))));
-            this.pnlSearchContent.Controls.Add(this.txtSearch);
-            this.pnlSearchContent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearchContent.Location = new System.Drawing.Point(0, 115);
-            this.pnlSearchContent.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlSearchContent.Name = "pnlSearchContent";
-            this.pnlSearchContent.Size = new System.Drawing.Size(238, 61);
-            this.pnlSearchContent.TabIndex = 6;
-            // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(188, 1);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.DisplayIcon = true;
-            this.txtSearch.Icon = global::NeptusSystem.Properties.Resources.search;
-            this.txtSearch.Lines = new string[] {
-        "Pesquisar Modulo"};
-            this.txtSearch.Location = new System.Drawing.Point(14, 21);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.ShowClearButton = true;
-            this.txtSearch.Size = new System.Drawing.Size(210, 23);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.Text = "Pesquisar Modulo";
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // pnlMenu
-            // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 176);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(238, 595);
-            this.pnlMenu.TabIndex = 7;
+            this.lblPrincipal.AutoSize = true;
+            this.lblPrincipal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrincipal.ForeColor = System.Drawing.Color.White;
+            this.lblPrincipal.Location = new System.Drawing.Point(12, 11);
+            this.lblPrincipal.Name = "lblPrincipal";
+            this.lblPrincipal.Size = new System.Drawing.Size(75, 21);
+            this.lblPrincipal.TabIndex = 0;
+            this.lblPrincipal.Text = "Principal";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1299, 821);
-            this.Controls.Add(this.pnlContentPosition);
-            this.DisplayHeader = false;
+            this.Controls.Add(this.pnlContainer);
+            this.Controls.Add(this.shadowPanel1);
+            this.Controls.Add(this.pnlHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
-            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Neptus System";
             this.pnlHeader.ResumeLayout(false);
-            this.pnlHeaderMain.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            this.pnlConfig.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
-            this.ctmConfig.ResumeLayout(false);
-            this.pnlContentPosition.ResumeLayout(false);
-            this.pnlMenuContent.ResumeLayout(false);
-            this.pnlSearchContent.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.shadowPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlPrincipalMenu.ResumeLayout(false);
+            this.pnlHeadPrincipal.ResumeLayout(false);
+            this.pnlHeadPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Panel pnlContentPosition;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlMenuContent;
-        private System.Windows.Forms.Panel pnlConfig;
-        private System.Windows.Forms.Panel pnlHeaderMain;
-        private System.Windows.Forms.PictureBox btnConfig;
-        private MetroFramework.Controls.MetroContextMenu ctmConfig;
-        private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Panel pnlMainContent;
-        private System.Windows.Forms.Panel pnlNavigation;
-        private System.Windows.Forms.Panel pnlMarginHeader;
-        private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnlSearchContent;
-        private MetroFramework.Controls.MetroTextBox txtSearch;
-        private System.Windows.Forms.FlowLayoutPanel pnlMenu;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox btnClose;
+        private Util.NeptusControls.ShadowPanel shadowPanel1;
+        private System.Windows.Forms.FlowLayoutPanel pnlModulo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblModulos;
+        private System.Windows.Forms.Panel pnlPrincipalMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHelp;
+        private Bunifu.Framework.UI.BunifuFlatButton btnInfo;
+        private Bunifu.Framework.UI.BunifuFlatButton btnConfig;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRelatorios;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHome;
+        private System.Windows.Forms.Panel pnlHeadPrincipal;
+        private System.Windows.Forms.Label lblPrincipal;
+        private Util.NeptusControls.ShadowPanel pnlContainer;
     }
 }

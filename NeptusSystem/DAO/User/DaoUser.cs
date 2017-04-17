@@ -35,7 +35,7 @@ namespace NeptusSystem.DAO
                 MdlUser.IdUsuario = Convert.ToInt32(rs["NPTIDLOGIN"].ToString());
                 MdlUser.Usuario = rs["NPTUSUARIO"].ToString();
                 MdlUser.Password = rs["NPTPASSWORD"].ToString();
-                MdlUser.Area = rs["NPTAREA"].ToString();
+                MdlUser.Area =  rs["NPTAREA"].ToString();
                 MdlUser.Acesso = rs["NPTACESSO"].ToString();
             }
 

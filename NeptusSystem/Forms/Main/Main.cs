@@ -1,28 +1,24 @@
-﻿using NeptusSystem.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ContractLicence;
-
+using Bunifu.Framework.UI;
 
 namespace NeptusSystem.Forms.Main
 {
-    public partial class Main : MetroFramework.Forms.MetroForm
+    public partial class Main : Form
     {
         List<IModulos> lstModulo = new List<IModulos>();
         private Session.Session session = Session.Session.Instance;
 
         public Main()
         {
+
+
             var catalog = new AggregateCatalog(
                 new AssemblyCatalog(Assembly.GetExecutingAssembly()),
                 new DirectoryCatalog("."));
@@ -37,11 +33,27 @@ namespace NeptusSystem.Forms.Main
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            MontarMenu();
+            MaximizedState();
             CarregarSession();
         }
 
-        
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            MontarMenu();
+        }
+
+
+
+        private void MaximizedState()
+        {
+            var rectangle = Screen.FromControl(this).Bounds;
+            this.FormBorderStyle = FormBorderStyle.None;
+            Size = new Size(rectangle.Width, rectangle.Height);
+            Location = new Point(0, 0);
+            Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new Size(workingRectangle.Width, workingRectangle.Height);
+        }
 
         private void CarregarSession()
         {
@@ -49,9 +61,46 @@ namespace NeptusSystem.Forms.Main
 
         }
 
-        private void picSearch_Click(object sender, EventArgs e)
-        {
 
+        private BunifuFlatButton CriarButtonModulo(IModulos modulo)
+        {
+            BunifuFlatButton btnModulo = new BunifuFlatButton();
+
+            btnModulo.Activecolor = Color.Gray;
+            btnModulo.BackColor = Color.Transparent;
+            btnModulo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnModulo.BorderRadius = 0;
+            btnModulo.ButtonText = "   " + modulo.moduloTitle;
+            btnModulo.Cursor = Cursors.Hand;
+            btnModulo.DisabledColor = Color.DimGray;
+            btnModulo.Dock = DockStyle.Top;
+            btnModulo.Iconcolor = Color.Transparent;
+            btnModulo.Iconimage = modulo.img;
+            btnModulo.Iconimage_right = null;
+            btnModulo.Iconimage_right_Selected = null;
+            btnModulo.Iconimage_Selected = null;
+            btnModulo.IconMarginLeft = 0;
+            btnModulo.IconMarginRight = 0;
+            btnModulo.IconRightVisible = true;
+            btnModulo.IconRightZoom = 0D;
+            btnModulo.IconVisible = true;
+            btnModulo.IconZoom = 30D;
+            btnModulo.IsTab = false;
+            btnModulo.Location = new Point(0, 126);
+            btnModulo.Name = "btn" + modulo.moduloTitle;
+            btnModulo.Normalcolor = Color.Transparent;
+            btnModulo.OnHovercolor = Color.Gray;
+            btnModulo.OnHoverTextColor = Color.White;
+            btnModulo.selected = false;
+            btnModulo.Size = new Size(244, 42);
+            btnModulo.TabIndex = 3;
+            btnModulo.Text = "   " + modulo.moduloTitle;
+            btnModulo.TextAlign = ContentAlignment.MiddleLeft;
+            btnModulo.Textcolor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            btnModulo.TextFont = new Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnModulo.Click += delegate (object sender, EventArgs e) { AbrirUsercontrol(sender, e, modulo.moduloControl); };
+
+            return btnModulo;
         }
 
 
@@ -59,29 +108,9 @@ namespace NeptusSystem.Forms.Main
         private void MontarMenu()
         {
 
-            switch (ContractLicence.Area)
-            {
-                case Area.Administracao:
-                    break;
-                case Area.Gerencia:
-                    break;
-                case Area.Portaria:
-                    break;
-                case Area.RH:
-                    break;
-                case Area.Seguranca:
-                    break;
-                case Area.Financeiro:
-                    break;
-                default:
-                    break;
-            }
-
             for (int i = 0; i < lstModulo.Count; i++)
             {
-                Label lblmodulo = new Label();
-                lblmodulo.Text = lstModulo[i].moduloTitle;
-                pnlMenu.Controls.Add(lblmodulo);
+                pnlModulo.Controls.Add(CriarButtonModulo(lstModulo[i]));
             }
             //MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile();
 
@@ -102,32 +131,33 @@ namespace NeptusSystem.Forms.Main
 
         }
 
-
-
         private void AbrirUsercontrol(object sender, EventArgs e, MetroFramework.Controls.MetroUserControl controle)
         {
-            pnlMainContent.Controls.Clear();
-            pnlMainContent.Controls.Add(controle);
+
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(controle);
+
+            //pnlMainContent.Controls.Clear();
+            //pnlMainContent.Controls.Add(controle);
         }
 
-        private void PopularMenu()
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pnlSide_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void btnConfig_Click(object sender, EventArgs e)
-        {
-            ctmConfig.Show(btnConfig, btnConfig.Location.X, btnConfig.Location.Y + pnlConfig.Height);
-        }
 
-        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new Sobre().Show();
-        }
+        //private void btnConfig_Click(object sender, EventArgs e)
+        //{
+        //    ctmConfig.Show(btnConfig, btnConfig.Location.X, btnConfig.Location.Y + pnlHorizontalMenu.Height);
+        //}
+
     }
 }

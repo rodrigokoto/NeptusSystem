@@ -14,6 +14,8 @@ namespace NeptusSystem.DAO
 
         public void ReturnUser(string user)
         {
+
+            
             DBFactory factory = new DBFactory();
 
             SqlConnection conn = factory.Conection();

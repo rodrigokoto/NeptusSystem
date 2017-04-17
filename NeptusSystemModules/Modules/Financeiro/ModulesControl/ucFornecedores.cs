@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NeptusSystemModules.Modules.Financeiro.BLL.Fornecedores;
+using NeptusSystemModules.Modules;
+using NeptusSystemModules.Modules.Administracao.ModulesControl.Proprietario;
 
 namespace NeptusSystem.Modules.ModulesControl.Financeiro
 {
@@ -19,7 +22,7 @@ namespace NeptusSystem.Modules.ModulesControl.Financeiro
 
         private void tileAdd_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ValidarCampos() { }

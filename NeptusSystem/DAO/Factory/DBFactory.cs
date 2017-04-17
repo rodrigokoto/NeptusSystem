@@ -7,15 +7,26 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using ContractLicence;
+using System.ComponentModel.Composition;
 
 namespace NeptusSystem.DAO
 {
-    public class DBFactory
+    [Export(typeof(IConnection))]
+    public class DBFactory : IConnection
     {
         public DBFactory() { }
 
         private static string _conexao = ConfigurationManager.ConnectionStrings["NeptusConection"].ConnectionString;
-        
+
+        public SqlConnection Connection
+        {
+            get
+            {
+                return Conection();
+            }
+        }
+
         public SqlConnection Conection()
         {
             SqlConnection conn = new SqlConnection(_conexao);

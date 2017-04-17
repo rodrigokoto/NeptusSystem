@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Users\RODRIGO\Desktop\GMNS\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
       <Private>True</Private>
@@ -46,6 +49,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,7 +60,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Modules\Administracao\Administracao.cs" />
+    <Compile Include="Modules\Administracao\ModulesControl\ucAdministracao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\ucAdministracao.Designer.cs">
+      <DependentUpon>ucAdministracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Proprietario\ucProprietario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Proprietario\ucProprietario.Designer.cs">
+      <DependentUpon>ucProprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Connection.cs" />
+    <Compile Include="Modules\ContainerModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ContainerModules.Designer.cs">
+      <DependentUpon>ContainerModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ControlesNeptus\UserControls\Endereco\Endereco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ControlesNeptus\UserControls\Endereco\Endereco.Designer.cs">
+      <DependentUpon>Endereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ControlesNeptus\UserControls\Endereco\UF.cs" />
+    <Compile Include="Modules\Financeiro\BLL\Fornecedores\BllFornecedores.cs" />
     <Compile Include="Modules\Financeiro\Fornecedores.cs" />
+    <Compile Include="Modules\Financeiro\Model\Fornecedores\Fornecedores.cs" />
+    <Compile Include="Modules\Financeiro\ModulesControl\ucFinanceiro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Financeiro\ModulesControl\ucFinanceiro.Designer.cs">
+      <DependentUpon>ucFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Financeiro\ModulesControl\ucFornecedores.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +110,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Modules\Administracao\ModulesControl\ucAdministracao.resx">
+      <DependentUpon>ucAdministracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Administracao\ModulesControl\Proprietario\ucProprietario.resx">
+      <DependentUpon>ucProprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ContainerModules.resx">
+      <DependentUpon>ContainerModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ControlesNeptus\UserControls\Endereco\Endereco.resx">
+      <DependentUpon>Endereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Financeiro\ModulesControl\ucFinanceiro.resx">
+      <DependentUpon>ucFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Financeiro\ModulesControl\ucFornecedores.resx">
       <DependentUpon>ucFornecedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +153,21 @@
       <Project>{384310f8-fd71-4356-b5a0-14e2c197b4ca}</Project>
       <Name>ContractLicence</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Administracao\BLL\" />
+    <Folder Include="Modules\Administracao\DAO\" />
+    <Folder Include="Modules\Administracao\Model\" />
+    <Folder Include="Modules\ControlesNeptus\BLL\" />
+    <Folder Include="Modules\ControlesNeptus\DAO\" />
+    <Folder Include="Modules\ControlesNeptus\Model\" />
+    <Folder Include="Modules\Financeiro\DAO\Fornecedores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
