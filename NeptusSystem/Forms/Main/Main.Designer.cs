@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlContainer = new NeptusSystem.Util.NeptusControls.ShadowPanel();
             this.shadowPanel1 = new NeptusSystem.Util.NeptusControls.ShadowPanel();
             this.pnlModulo = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,11 +49,13 @@
             this.btnHome = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlHeadPrincipal = new System.Windows.Forms.Panel();
             this.lblPrincipal = new System.Windows.Forms.Label();
+            this.ucHome1 = new NeptusSystem.Forms.Main.UcHome();
             this.pnlHeader.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlContainer.SuspendLayout();
             this.shadowPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlPrincipalMenu.SuspendLayout();
@@ -83,19 +85,6 @@
             this.panel3.Size = new System.Drawing.Size(380, 45);
             this.panel3.TabIndex = 6;
             // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Image = global::NeptusSystem.Properties.Resources.close_white;
-            this.btnClose.Location = new System.Drawing.Point(328, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(52, 45);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // bunifuMaterialTextbox1
             // 
             this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -115,6 +104,30 @@
             this.bunifuMaterialTextbox1.TabIndex = 0;
             this.bunifuMaterialTextbox1.Text = "Pesquisar";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Dashboard Neptus";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.Image = global::NeptusSystem.Properties.Resources.close_white;
+            this.btnClose.Location = new System.Drawing.Point(328, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(52, 45);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox3
             // 
@@ -136,20 +149,10 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 26);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Dashboard Neptus";
-            // 
             // pnlContainer
             // 
             this.pnlContainer.BorderColor = System.Drawing.Color.Empty;
+            this.pnlContainer.Controls.Add(this.ucHome1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(244, 45);
             this.pnlContainer.Name = "pnlContainer";
@@ -414,6 +417,14 @@
             this.lblPrincipal.TabIndex = 0;
             this.lblPrincipal.Text = "Principal";
             // 
+            // ucHome1
+            // 
+            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHome1.Location = new System.Drawing.Point(0, 0);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(1055, 776);
+            this.ucHome1.TabIndex = 0;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +444,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlContainer.ResumeLayout(false);
             this.shadowPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -464,5 +476,6 @@
         private System.Windows.Forms.Panel pnlHeadPrincipal;
         private System.Windows.Forms.Label lblPrincipal;
         private Util.NeptusControls.ShadowPanel pnlContainer;
+        private UcHome ucHome1;
     }
 }

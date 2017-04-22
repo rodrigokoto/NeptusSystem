@@ -18,39 +18,45 @@ namespace NeptusSystemModules.Modules
             set { this.Text = value; }
         }
 
-      
 
-        
+
+
         public ContainerModules()
         {
             InitializeComponent();
         }
 
-        public void AddControl(MetroFramework.Controls.MetroUserControl control, string ControlTitle )
+        public void AddControl(MetroFramework.Controls.MetroUserControl control, string ControlTitle)
         {
             pnlContainer.Controls.Clear();
             Title = ControlTitle;
 
+            Size componentSize = new Size();
+
+            componentSize.Height = this.Height + control.Height;
+            componentSize.Width = control.Width + 50;
+
             Rectangle workingRectangle = Screen.PrimaryScreen.WorkingArea;
             Size full = new Size(workingRectangle.Width, workingRectangle.Height);
-            Size comparation = this.Size + control.Size;
+            
             Size size = new Size();
 
-            if (comparation.Width > full.Width)
+            if (componentSize.Width > full.Width)
             {
                 size.Width = full.Width;
             }
             else
             {
-                size.Width = comparation.Width;
+                size.Width = componentSize.Width;
             }
 
-            if (comparation.Height > full.Height)
+            if (componentSize.Height > full.Height)
             {
                 size.Height = full.Height;
             }
-            else {
-                size.Height = comparation.Height;
+            else
+            {
+                size.Height = componentSize.Height;
             }
 
             this.Size = size;

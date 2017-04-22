@@ -11,10 +11,27 @@ using System.Reflection;
 
 namespace NeptusSystemModules.Modules
 {
-    class Connection
+    public class Connection
     {
         [Import]
         public IConnection NeptusConection;
+
+        private static Connection instance = null;
+
+        public static Connection Instance
+        {
+            get {
+                if (instance == null)
+                {
+                    instance = new Connection() ;
+                }
+                return instance;
+            }
+            set
+            {
+                instance = value;
+            }
+        }
 
         public Connection()
         {

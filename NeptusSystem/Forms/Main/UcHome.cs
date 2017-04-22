@@ -16,5 +16,11 @@ namespace NeptusSystem.Forms.Main
         {
             InitializeComponent();
         }
+
+        
+        public void PopularWebBrowser()
+        {
+         
+        }
     }
 }

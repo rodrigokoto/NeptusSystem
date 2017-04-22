@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NeptusSystemModules.Modules.Administracao.ModulesControl.Proprietario;
+using NeptusSystemModules.Modules.Administracao.ModulesControl;
 using MetroFramework;
 
 namespace NeptusSystemModules.Modules.Administracao.ModulesControl
@@ -17,6 +17,9 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
         public ucAdministracao()
         {
             InitializeComponent();
+
+            Connection con = Connection.Instance;
+
         }
 
         private void tleProprietario_Click(object sender, EventArgs e)
@@ -31,11 +34,6 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                 container.Show();
                 container.AddControl(new ucProprietario(), "Proprietário");
             }
-          //  new ContainerModules().Show();
-            //ContainerModules moduleOpen = new ContainerModules();
-            //moduleOpen.AddControl(new ucProprietario(), "Proprietário");
-            //moduleOpen.Show();
-            
         }
     }
 }

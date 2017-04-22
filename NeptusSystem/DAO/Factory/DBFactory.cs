@@ -32,7 +32,7 @@ namespace NeptusSystem.DAO
             SqlConnection conn = new SqlConnection(_conexao);
 
             conn.Open();
-            
+
             return conn;
         }
 

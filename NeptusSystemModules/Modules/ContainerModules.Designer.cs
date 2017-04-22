@@ -41,7 +41,7 @@
             this.pnlContainer.HorizontalScrollbarSize = 10;
             this.pnlContainer.Location = new System.Drawing.Point(20, 60);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(352, 39);
+            this.pnlContainer.Size = new System.Drawing.Size(255, 36);
             this.pnlContainer.TabIndex = 0;
             this.pnlContainer.VerticalScrollbar = true;
             this.pnlContainer.VerticalScrollbarBarColor = true;
@@ -52,7 +52,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 119);
+            this.ClientSize = new System.Drawing.Size(295, 116);
             this.Controls.Add(this.pnlContainer);
             this.Name = "ContainerModules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;

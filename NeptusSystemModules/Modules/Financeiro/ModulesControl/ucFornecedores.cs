@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NeptusSystemModules.Modules.Financeiro.BLL.Fornecedores;
 using NeptusSystemModules.Modules;
-using NeptusSystemModules.Modules.Administracao.ModulesControl.Proprietario;
+using NeptusSystemModules.Modules.Administracao.ModulesControl;
 
 namespace NeptusSystem.Modules.ModulesControl.Financeiro
 {
