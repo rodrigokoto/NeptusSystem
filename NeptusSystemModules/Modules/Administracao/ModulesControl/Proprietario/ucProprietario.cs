@@ -20,7 +20,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
     public partial class ucProprietario : MetroFramework.Controls.MetroUserControl
     {
         List<Proprietario> lstProprietario;
-        
+
         public ucProprietario()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
 
         }
 
-        public async void PopularListProprietario()
+        public void PopularListProprietario()
         {
             dgrProprietario.Rows.Clear();
 
@@ -265,7 +265,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                     modelProp.PROPCEL = txtCel.Text;
                     modelProp.PROPDDD1 = txtDDD1.Text;
                     modelProp.PROPDDD2 = txtDDD2.Text;
-                    
+
                     endereco.ENDID = Convert.ToInt32(lblIdEnd.Text);
                     endereco.ENDRUA = txtRua.Text;
                     endereco.ENDNUM = txtNumero.Text;
@@ -366,49 +366,51 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
 
         private void dgrProprietario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int ID = Convert.ToInt32(dgrProprietario.Rows[e.RowIndex].Cells[0].Value.ToString());
-
-            BLL.BllProprietario bllproprietario = new BLL.BllProprietario();
-            BLL.BllEndereco bllendereco = new BLL.BllEndereco();
-
-            Proprietario proprietario = new Proprietario();
-            Endereco endereco = new Endereco();
-
-            proprietario = bllproprietario.Return_Proprietario(ID);
-            endereco = bllendereco.Return_Endereco(proprietario.PROPEND);
-
-            txtNome.Text = proprietario.PROPNOME;
-            txtDoc.Text = proprietario.PROPDOC;
-            txtRG.Text = proprietario.PROPRG;
-            txtDDD1.Text = proprietario.PROPDDD1;
-            txtDDD2.Text = proprietario.PROPDDD2;
-
-            if (proprietario.PROPTPPESSOA == "F")
+            if (e.RowIndex != -1)
             {
-                chkfisica.Checked = true;
-                chkjuridica.Checked = false;
-            }
-            else
-            {
-                chkfisica.Checked = false;
-                chkjuridica.Checked = true;
-            }
+                int ID = Convert.ToInt32(dgrProprietario.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-            txtTel.Text = proprietario.PROPTEL;
-            txtCel.Text = proprietario.PROPCEL;
-            txtEmail.Text = proprietario.PROPMAIL;
-            txtRua.Text = endereco.ENDRUA;
-            txtNumero.Text = endereco.ENDNUM;
-            txtComp.Text = endereco.ENDCOMPLEMENTO;
-            txtBairro.Text = endereco.ENDBAIRRO;
-            txtCep.Text = endereco.ENDCEP;
-            txtCidade.Text = endereco.ENDCIDADE;
-            txtEstado.Text = endereco.ENDESTADO;
-            cbxUF.SelectedItem = new Util().Retorna_UF(endereco.ENDUF);
-            btnInserir.Text = "Alterar";
-            lblID.Text = proprietario.PROPID.ToString();
-            lblIdEnd.Text = proprietario.PROPEND.ToString();
+                BLL.BllProprietario bllproprietario = new BLL.BllProprietario();
+                BLL.BllEndereco bllendereco = new BLL.BllEndereco();
 
+                Proprietario proprietario = new Proprietario();
+                Endereco endereco = new Endereco();
+
+                proprietario = bllproprietario.Return_Proprietario(ID);
+                endereco = bllendereco.Return_Endereco(proprietario.PROPEND);
+
+                txtNome.Text = proprietario.PROPNOME;
+                txtDoc.Text = proprietario.PROPDOC;
+                txtRG.Text = proprietario.PROPRG;
+                txtDDD1.Text = proprietario.PROPDDD1;
+                txtDDD2.Text = proprietario.PROPDDD2;
+
+                if (proprietario.PROPTPPESSOA == "F")
+                {
+                    chkfisica.Checked = true;
+                    chkjuridica.Checked = false;
+                }
+                else
+                {
+                    chkfisica.Checked = false;
+                    chkjuridica.Checked = true;
+                }
+
+                txtTel.Text = proprietario.PROPTEL;
+                txtCel.Text = proprietario.PROPCEL;
+                txtEmail.Text = proprietario.PROPMAIL;
+                txtRua.Text = endereco.ENDRUA;
+                txtNumero.Text = endereco.ENDNUM;
+                txtComp.Text = endereco.ENDCOMPLEMENTO;
+                txtBairro.Text = endereco.ENDBAIRRO;
+                txtCep.Text = endereco.ENDCEP;
+                txtCidade.Text = endereco.ENDCIDADE;
+                txtEstado.Text = endereco.ENDESTADO;
+                cbxUF.SelectedItem = new Util().Retorna_UF(endereco.ENDUF);
+                btnInserir.Text = "Alterar";
+                lblID.Text = proprietario.PROPID.ToString();
+                lblIdEnd.Text = proprietario.PROPEND.ToString();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

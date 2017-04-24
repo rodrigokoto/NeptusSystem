@@ -249,10 +249,6 @@
       <Project>{384310f8-fd71-4356-b5a0-14e2c197b4ca}</Project>
       <Name>ContractLicence</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NeptusSystemModules\NeptusSystemModules.csproj">
-      <Project>{FD1584AC-4612-437A-BF01-C136BB31E3DA}</Project>
-      <Name>NeptusSystemModules</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\setting_24px.png" />
@@ -334,6 +330,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neptus_home1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
