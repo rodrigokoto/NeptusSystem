@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucProprietario));
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.txtDoc = new MetroFramework.Controls.MetroTextBox();
@@ -231,7 +231,7 @@
             this.txtTel.CustomButton.Visible = false;
             this.txtTel.Lines = new string[0];
             this.txtTel.Location = new System.Drawing.Point(111, 262);
-            this.txtTel.MaxLength = 32767;
+            this.txtTel.MaxLength = 9;
             this.txtTel.Name = "txtTel";
             this.txtTel.PasswordChar = '\0';
             this.txtTel.PromptText = "xxxx-xxxx";
@@ -246,6 +246,7 @@
             this.txtTel.WaterMark = "xxxx-xxxx";
             this.txtTel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTel.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // metroLabel4
             // 
@@ -272,7 +273,7 @@
             this.txtCel.CustomButton.Visible = false;
             this.txtCel.Lines = new string[0];
             this.txtCel.Location = new System.Drawing.Point(111, 310);
-            this.txtCel.MaxLength = 32767;
+            this.txtCel.MaxLength = 10;
             this.txtCel.Name = "txtCel";
             this.txtCel.PasswordChar = '\0';
             this.txtCel.PromptText = "xxxxx-xxxx";
@@ -287,6 +288,7 @@
             this.txtCel.WaterMark = "xxxxx-xxxx";
             this.txtCel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCel.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCel_KeyPress);
             // 
             // metroLabel5
             // 
@@ -548,7 +550,7 @@
             this.txtCep.CustomButton.Visible = false;
             this.txtCep.Lines = new string[0];
             this.txtCep.Location = new System.Drawing.Point(339, 455);
-            this.txtCep.MaxLength = 11;
+            this.txtCep.MaxLength = 9;
             this.txtCep.Name = "txtCep";
             this.txtCep.PasswordChar = '\0';
             this.txtCep.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -561,6 +563,7 @@
             this.txtCep.UseSelectable = true;
             this.txtCep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCep.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
             // txtBairro
             // 
@@ -787,19 +790,19 @@
             this.dgrProprietario.AllowUserToOrderColumns = true;
             this.dgrProprietario.AllowUserToResizeColumns = false;
             this.dgrProprietario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgrProprietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrProprietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgrProprietario.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgrProprietario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrProprietario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrProprietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrProprietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgrProprietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrProprietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clId,

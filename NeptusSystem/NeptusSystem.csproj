@@ -249,6 +249,10 @@
       <Project>{384310f8-fd71-4356-b5a0-14e2c197b4ca}</Project>
       <Name>ContractLicence</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NeptusSystemModules\NeptusSystemModules.csproj">
+      <Project>{fd1584ac-4612-437a-bf01-c136bb31e3da}</Project>
+      <Name>NeptusSystemModules</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\setting_24px.png" />

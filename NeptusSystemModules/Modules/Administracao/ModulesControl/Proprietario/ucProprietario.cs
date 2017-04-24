@@ -417,5 +417,52 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
         {
             LimparCampos();
         }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetroFramework.Controls.MetroTextBox t = sender as MetroFramework.Controls.MetroTextBox; // ou text Box
+            
+
+            if (char.IsNumber(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                t.SelectionStart = t.Text.Length + 1;
+
+                if (t.Text.Length == 4)
+                {
+                    t.Text += '-';
+                    t.SelectionStart = t.Text.Length + 1;
+                }
+            }
+        }
+
+        private void txtCel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetroFramework.Controls.MetroTextBox t = sender as MetroFramework.Controls.MetroTextBox; // ou text Box
+            if (char.IsNumber(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                t.SelectionStart = t.Text.Length + 1;
+
+                if (t.Text.Length == 5)
+                {
+                    t.Text += '-';
+                    t.SelectionStart = t.Text.Length + 1;
+                }
+            }
+        }
+
+        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetroFramework.Controls.MetroTextBox t = sender as MetroFramework.Controls.MetroTextBox; // ou text Box
+            if (char.IsNumber(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                t.SelectionStart = t.Text.Length + 1;
+
+                if (t.Text.Length == 5)
+                {
+                    t.Text += '-';
+                    t.SelectionStart = t.Text.Length + 1;
+                }
+            }
+        }
     }
 }
