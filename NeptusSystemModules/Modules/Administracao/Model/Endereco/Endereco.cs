@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeptusSystemModules.Modules.Administracao.Model.Endereco
+namespace NeptusSystemModules.Modules.Administracao.Model
 {
     public class Endereco
     {
@@ -12,7 +12,6 @@ namespace NeptusSystemModules.Modules.Administracao.Model.Endereco
         public string ENDRUA { get; set; }
         public string ENDBAIRRO { get; set; }
         public string ENDCIDADE { get; set; }
-        public string ENDESTADO { get; set; }
         public string ENDCOMPLEMENTO { get; set; }
         public string ENDNUM { get; set; }
         public string ENDCEP { get; set; }

@@ -12,14 +12,13 @@ using NeptusSystemModules.Modules.ControlesNeptus.Util;
 using System.Text.RegularExpressions;
 using MetroFramework;
 using NeptusSystemModules.Modules.Administracao.Model;
-using NeptusSystemModules.Modules.Administracao.Model.Proprietario;
-using NeptusSystemModules.Modules.Administracao.Model.Endereco;
 
 namespace NeptusSystemModules.Modules.Administracao.ModulesControl
 {
     public partial class ucProprietario : MetroFramework.Controls.MetroUserControl
     {
         List<Proprietario> lstProprietario;
+        bool Error = false;
 
         public ucProprietario()
         {
@@ -49,9 +48,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                 dgrProprietario.Rows.Add(lstProprietario[i].PROPID, lstProprietario[i].PROPNOME);
             }
         }
-
-        bool Error = false;
-
+        
         public bool ValidarEmail(string email)
         {
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
@@ -83,6 +80,8 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
             cbxUF.SelectedItem = UF.SP;
 
         }
+
+       
 
         private void chkfisica_OnChange(object sender, EventArgs e)
         {
@@ -182,7 +181,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                     MetroFramework.Controls.MetroTextBox t = new MetroFramework.Controls.MetroTextBox();
                     t = (MetroFramework.Controls.MetroTextBox)c;
 
-                    if (t.Name != txtSearch.Name && t.Name != txtComp.Name)
+                    if (t.Name != txtSearch.Name && t.Name != txtComp.Name && t.Name != txtEmail.Name)
                     {
                         if (t.Text == "")
                         {
@@ -225,7 +224,6 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                     endereco.ENDBAIRRO = txtBairro.Text;
                     endereco.ENDCEP = txtCep.Text;
                     endereco.ENDCIDADE = txtCidade.Text;
-                    endereco.ENDESTADO = txtEstado.Text;
                     endereco.ENDUF = cbxUF.Text;
                     if (chkfisica.Checked == true)
                     {
@@ -273,7 +271,6 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                     endereco.ENDBAIRRO = txtBairro.Text;
                     endereco.ENDCEP = txtCep.Text;
                     endereco.ENDCIDADE = txtCidade.Text;
-                    endereco.ENDESTADO = txtEstado.Text;
                     endereco.ENDUF = cbxUF.Text;
 
                     modelProp.PROPEND = endereco.ENDID;
@@ -328,8 +325,7 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
             txtCep.Text = "";
             cbxUF.SelectedItem = UF.SP;
             txtCidade.Text = "";
-            txtEstado.Text = "";
-
+            
             btnInserir.Text = "Inserir";
         }
 
@@ -405,7 +401,6 @@ namespace NeptusSystemModules.Modules.Administracao.ModulesControl
                 txtBairro.Text = endereco.ENDBAIRRO;
                 txtCep.Text = endereco.ENDCEP;
                 txtCidade.Text = endereco.ENDCIDADE;
-                txtEstado.Text = endereco.ENDESTADO;
                 cbxUF.SelectedItem = new Util().Retorna_UF(endereco.ENDUF);
                 btnInserir.Text = "Alterar";
                 lblID.Text = proprietario.PROPID.ToString();

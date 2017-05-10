@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeptusSystemModules.Modules.Administracao.Model.Proprietario
+namespace NeptusSystemModules.Modules.Administracao.Model
 {
     public class Proprietario
     {

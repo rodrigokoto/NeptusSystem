@@ -1,4 +1,4 @@
-﻿using NeptusSystemModules.Modules.Administracao.Model.Endereco;
+﻿using NeptusSystemModules.Modules.Administracao.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

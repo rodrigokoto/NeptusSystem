@@ -64,12 +64,39 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Modules\Administracao\Administracao.cs" />
-    <Compile Include="Modules\Administracao\BLL\Proprietario\BllEndereco.cs" />
+    <Compile Include="Modules\Administracao\BLL\Apartamento\BllApartamento.cs" />
+    <Compile Include="Modules\Administracao\BLL\Garagem\BllGaragem.cs" />
+    <Compile Include="Modules\Administracao\BLL\Morador\BllMorador.cs" />
+    <Compile Include="Modules\Administracao\BLL\Endereco\BllEndereco.cs" />
     <Compile Include="Modules\Administracao\BLL\Proprietario\BllProprietario.cs" />
-    <Compile Include="Modules\Administracao\DAO\Proprietario\DaoEndereco.cs" />
+    <Compile Include="Modules\Administracao\DAO\Garagem\DaoGaragem.cs" />
+    <Compile Include="Modules\Administracao\DAO\Apartamento\DaoApartamento.cs" />
+    <Compile Include="Modules\Administracao\DAO\Morador\DaoMorador.cs" />
+    <Compile Include="Modules\Administracao\DAO\Endereco\DaoEndereco.cs" />
     <Compile Include="Modules\Administracao\DAO\Proprietario\DaoProprietario.cs" />
+    <Compile Include="Modules\Administracao\Model\Apartamento\Apartamento.cs" />
     <Compile Include="Modules\Administracao\Model\Endereco\Endereco.cs" />
+    <Compile Include="Modules\Administracao\Model\Garagem\Garagem.cs" />
+    <Compile Include="Modules\Administracao\Model\Morador\Morador.cs" />
     <Compile Include="Modules\Administracao\Model\Proprietario\Proprietario.cs" />
+    <Compile Include="Modules\Administracao\ModulesControl\Apartamento\ucAptCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Apartamento\ucAptCadastro.Designer.cs">
+      <DependentUpon>ucAptCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Garagem\ucGarCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Garagem\ucGarCadastro.Designer.cs">
+      <DependentUpon>ucGarCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Moradores\ucMorador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Administracao\ModulesControl\Moradores\ucMorador.Designer.cs">
+      <DependentUpon>ucMorador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Administracao\ModulesControl\ucAdministracao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +141,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Modules\Administracao\ModulesControl\Apartamento\ucAptCadastro.resx">
+      <DependentUpon>ucAptCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Administracao\ModulesControl\Garagem\ucGarCadastro.resx">
+      <DependentUpon>ucGarCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Administracao\ModulesControl\Moradores\ucMorador.resx">
+      <DependentUpon>ucMorador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Administracao\ModulesControl\ucAdministracao.resx">
       <DependentUpon>ucAdministracao.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +215,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

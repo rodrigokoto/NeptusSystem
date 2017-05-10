@@ -166,6 +166,7 @@ namespace NeptusSystem.Forms.Login
         {
             Session.Session session = Session.Session.Instance;
 
+            session.SessinUserId = user.IdUsuario.ToString();
             session.SessionAcesso = user.Acesso;
             session.SessionArea = user.Area;
             session.SessionUser = user.Usuario;

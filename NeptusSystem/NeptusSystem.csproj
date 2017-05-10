@@ -123,6 +123,18 @@
     <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login\Reset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\Reset.Designer.cs">
+      <DependentUpon>Reset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main\frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,12 @@
     <Compile Include="Forms\Main\UcHome.Designer.cs">
       <DependentUpon>UcHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Main\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Menu\Menu.cs" />
     <Compile Include="Model\User\User.cs" />
     <Compile Include="Program.cs" />
@@ -163,6 +181,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\Reset.resx">
+      <DependentUpon>Reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
@@ -178,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\UcHome.resx">
       <DependentUpon>UcHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -248,6 +275,10 @@
     <ProjectReference Include="..\ContractLicence\ContractLicence.csproj">
       <Project>{384310f8-fd71-4356-b5a0-14e2c197b4ca}</Project>
       <Name>ContractLicence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeptusSystemModules\NeptusSystemModules.csproj">
+      <Project>{fd1584ac-4612-437a-bf01-c136bb31e3da}</Project>
+      <Name>NeptusSystemModules</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\neptus_home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

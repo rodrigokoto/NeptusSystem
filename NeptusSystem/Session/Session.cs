@@ -27,7 +27,7 @@ namespace NeptusSystem.Session
             }
         }
 
-
+        private string _sessinUserId;
         private string _sessionUser;
         private string _sessionAcesso;
         private string _sessionArea;
@@ -83,6 +83,19 @@ namespace NeptusSystem.Session
             set
             {
                 _sessionAcesso = value;
+            }
+        }
+
+        public string SessinUserId
+        {
+            get
+            {
+                return _sessinUserId;
+            }
+
+            set
+            {
+                _sessinUserId = value;
             }
         }
     }

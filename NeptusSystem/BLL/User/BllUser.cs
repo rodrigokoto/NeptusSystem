@@ -14,5 +14,10 @@ namespace NeptusSystem.BLL
         {
             return new DaoUser().ReturnUser(name);
         }
+
+        public void ResetPassword(User user)
+        {
+            new DaoUser().ResetPassword(user);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using NeptusSystemModules.Modules.Administracao.Model.Endereco;
+﻿using NeptusSystemModules.Modules.Administracao.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,12 +28,11 @@ namespace NeptusSystemModules.Modules.Administracao.DAO
                 SqlCommand command = Sqlcon.CreateCommand();
                 transaction = Sqlcon.BeginTransaction();
                 command.Transaction = transaction;
-                string insertCommand = @"INSERT INTO NPTEND (ENDRUA, ENDBAIRRO, ENDCIDADE, ENDESTADO, ENDCOMPLEMENTO, ENDNUM, ENDCEP, ENDUF) OUTPUT INSERTED.ENDID VALUES(@ENDRUA, @ENDBAIRRO, @ENDCIDADE, @ENDESTADO, @ENDCOMPLEMENTO, @ENDNUM, @ENDCEP, @ENDUF)";
+                string insertCommand = @"INSERT INTO NPTEND (ENDRUA, ENDBAIRRO, ENDCIDADE, ENDCOMPLEMENTO, ENDNUM, ENDCEP, ENDUF) OUTPUT INSERTED.ENDID VALUES(@ENDRUA, @ENDBAIRRO, @ENDCIDADE, @ENDCOMPLEMENTO, @ENDNUM, @ENDCEP, @ENDUF)";
 
                 command.Parameters.AddWithValue("@ENDRUA", endereco.ENDRUA);
                 command.Parameters.AddWithValue("@ENDBAIRRO", endereco.ENDBAIRRO);
                 command.Parameters.AddWithValue("@ENDCIDADE", endereco.ENDCIDADE);
-                command.Parameters.AddWithValue("@ENDESTADO", endereco.ENDESTADO);
                 command.Parameters.AddWithValue("@ENDCOMPLEMENTO", endereco.ENDCOMPLEMENTO);
                 command.Parameters.AddWithValue("@ENDNUM", endereco.ENDNUM);
                 command.Parameters.AddWithValue("@ENDCEP", endereco.ENDCEP);
@@ -69,7 +68,7 @@ namespace NeptusSystemModules.Modules.Administracao.DAO
             Sqlcon = con.NeptusConection.Connection;
             SqlCommand command = con.NeptusConection.Connection.CreateCommand();
 
-            string selectCommand = @"SELECT ENDID,ENDRUA,ENDBAIRRO,ENDCIDADE,ENDESTADO,ENDCOMPLEMENTO,ENDNUM,ENDCEP,ENDUF  FROM NPTEND WHERE ENDID = @ENDID";
+            string selectCommand = @"SELECT ENDID,ENDRUA,ENDBAIRRO,ENDCIDADE,ENDCOMPLEMENTO,ENDNUM,ENDCEP,ENDUF  FROM NPTEND WHERE ENDID = @ENDID";
 
             command.CommandText = selectCommand;
 
@@ -83,7 +82,6 @@ namespace NeptusSystemModules.Modules.Administracao.DAO
                 endereco.ENDRUA = rs["ENDRUA"].ToString();
                 endereco.ENDBAIRRO = rs["ENDBAIRRO"].ToString();
                 endereco.ENDCIDADE = rs["ENDCIDADE"].ToString();
-                endereco.ENDESTADO = rs["ENDESTADO"].ToString();
                 endereco.ENDCOMPLEMENTO = rs["ENDCOMPLEMENTO"].ToString();
                 endereco.ENDNUM = rs["ENDNUM"].ToString();
                 endereco.ENDCEP = rs["ENDCEP"].ToString();
@@ -106,12 +104,11 @@ namespace NeptusSystemModules.Modules.Administracao.DAO
                 SqlCommand command = Sqlcon.CreateCommand();
                 transaction = Sqlcon.BeginTransaction();
                 command.Transaction = transaction;
-                string updateCommand = @"UPDATE NPTEND SET ENDRUA = @ENDRUA , ENDBAIRRO = @ENDBAIRRO, ENDCIDADE = @ENDCIDADE, ENDESTADO = @ENDESTADO, ENDCOMPLEMENTO = @ENDCOMPLEMENTO, ENDNUM = @ENDNUM, ENDCEP = @ENDCEP, ENDUF = @ENDUF WHERE ENDID = @ENDID";
+                string updateCommand = @"UPDATE NPTEND SET ENDRUA = @ENDRUA , ENDBAIRRO = @ENDBAIRRO, ENDCIDADE = @ENDCIDADE, ENDCOMPLEMENTO = @ENDCOMPLEMENTO, ENDNUM = @ENDNUM, ENDCEP = @ENDCEP, ENDUF = @ENDUF WHERE ENDID = @ENDID";
 
                 command.Parameters.AddWithValue("@ENDRUA", endereco.ENDRUA);
                 command.Parameters.AddWithValue("@ENDBAIRRO", endereco.ENDBAIRRO);
                 command.Parameters.AddWithValue("@ENDCIDADE", endereco.ENDCIDADE);
-                command.Parameters.AddWithValue("@ENDESTADO", endereco.ENDESTADO);
                 command.Parameters.AddWithValue("@ENDCOMPLEMENTO", endereco.ENDCOMPLEMENTO);
                 command.Parameters.AddWithValue("@ENDNUM", endereco.ENDNUM);
                 command.Parameters.AddWithValue("@ENDCEP", endereco.ENDCEP);

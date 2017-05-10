@@ -8,5 +8,6 @@ namespace NeptusSystem.BLL.Login
 {
     public class BllLogin
     {
+
     }
 }

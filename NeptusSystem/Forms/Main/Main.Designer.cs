@@ -28,14 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.pnlPesquisar = new System.Windows.Forms.Panel();
+            this.txtPesquisar = new MetroFramework.Controls.MetroTextBox();
+            this.picFind = new System.Windows.Forms.PictureBox();
+            this.pnlUser = new System.Windows.Forms.Panel();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.picUser = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.mcmUser = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.tsmPassword = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContainer = new NeptusSystem.Util.NeptusControls.ShadowPanel();
             this.ucHome1 = new NeptusSystem.Forms.Main.UcHome();
             this.shadowPanel1 = new NeptusSystem.Util.NeptusControls.ShadowPanel();
@@ -51,10 +58,14 @@
             this.pnlHeadPrincipal = new System.Windows.Forms.Panel();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlSearch.SuspendLayout();
+            this.pnlPesquisar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFind)).BeginInit();
+            this.pnlUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.mcmUser.SuspendLayout();
             this.pnlContainer.SuspendLayout();
             this.shadowPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,7 +76,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.pnlHeader.Controls.Add(this.panel3);
+            this.pnlHeader.Controls.Add(this.pnlSearch);
             this.pnlHeader.Controls.Add(this.pictureBox4);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -74,61 +85,114 @@
             this.pnlHeader.Size = new System.Drawing.Size(1299, 45);
             this.pnlHeader.TabIndex = 2;
             // 
-            // panel3
+            // pnlSearch
             // 
-            this.panel3.Controls.Add(this.btnClose);
-            this.panel3.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(919, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(380, 45);
-            this.panel3.TabIndex = 6;
+            this.pnlSearch.Controls.Add(this.pnlPesquisar);
+            this.pnlSearch.Controls.Add(this.pnlUser);
+            this.pnlSearch.Controls.Add(this.btnClose);
+            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSearch.Location = new System.Drawing.Point(608, 0);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(691, 45);
+            this.pnlSearch.TabIndex = 6;
+            // 
+            // pnlPesquisar
+            // 
+            this.pnlPesquisar.Controls.Add(this.txtPesquisar);
+            this.pnlPesquisar.Controls.Add(this.picFind);
+            this.pnlPesquisar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPesquisar.Location = new System.Drawing.Point(0, 0);
+            this.pnlPesquisar.Name = "pnlPesquisar";
+            this.pnlPesquisar.Size = new System.Drawing.Size(384, 45);
+            this.pnlPesquisar.TabIndex = 7;
+            // 
+            // txtPesquisar
+            // 
+            // 
+            // 
+            // 
+            this.txtPesquisar.CustomButton.Image = null;
+            this.txtPesquisar.CustomButton.Location = new System.Drawing.Point(275, 1);
+            this.txtPesquisar.CustomButton.Name = "";
+            this.txtPesquisar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPesquisar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPesquisar.CustomButton.TabIndex = 1;
+            this.txtPesquisar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPesquisar.CustomButton.UseSelectable = true;
+            this.txtPesquisar.CustomButton.Visible = false;
+            this.txtPesquisar.Lines = new string[0];
+            this.txtPesquisar.Location = new System.Drawing.Point(39, 12);
+            this.txtPesquisar.MaxLength = 32767;
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.PasswordChar = '\0';
+            this.txtPesquisar.PromptText = "Pesquisar";
+            this.txtPesquisar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPesquisar.SelectedText = "";
+            this.txtPesquisar.SelectionLength = 0;
+            this.txtPesquisar.SelectionStart = 0;
+            this.txtPesquisar.ShortcutsEnabled = true;
+            this.txtPesquisar.Size = new System.Drawing.Size(297, 23);
+            this.txtPesquisar.TabIndex = 7;
+            this.txtPesquisar.UseSelectable = true;
+            this.txtPesquisar.WaterMark = "Pesquisar";
+            this.txtPesquisar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPesquisar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // picFind
+            // 
+            this.picFind.Image = global::NeptusSystem.Properties.Resources.search;
+            this.picFind.Location = new System.Drawing.Point(17, 18);
+            this.picFind.Name = "picFind";
+            this.picFind.Size = new System.Drawing.Size(16, 16);
+            this.picFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picFind.TabIndex = 6;
+            this.picFind.TabStop = false;
+            // 
+            // pnlUser
+            // 
+            this.pnlUser.Controls.Add(this.lblUser);
+            this.pnlUser.Controls.Add(this.picUser);
+            this.pnlUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlUser.Location = new System.Drawing.Point(384, 0);
+            this.pnlUser.Name = "pnlUser";
+            this.pnlUser.Size = new System.Drawing.Size(255, 45);
+            this.pnlUser.TabIndex = 6;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(52, 22);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(45, 16);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "label2";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
+            // 
+            // picUser
+            // 
+            this.picUser.Image = global::NeptusSystem.Properties.Resources.user_blue;
+            this.picUser.Location = new System.Drawing.Point(17, 12);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(29, 26);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picUser.TabIndex = 0;
+            this.picUser.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.Image = global::NeptusSystem.Properties.Resources.close_white;
-            this.btnClose.Location = new System.Drawing.Point(328, 0);
+            this.btnClose.Location = new System.Drawing.Point(639, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 45);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnClose.TabIndex = 4;
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(26, 12);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(256, 28);
-            this.bunifuMaterialTextbox1.TabIndex = 0;
-            this.bunifuMaterialTextbox1.Text = "Pesquisar";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox1.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::NeptusSystem.Properties.Resources.search;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // pictureBox4
             // 
@@ -150,6 +214,21 @@
             this.label1.Size = new System.Drawing.Size(171, 26);
             this.label1.TabIndex = 5;
             this.label1.Text = "Dashboard Neptus";
+            // 
+            // mcmUser
+            // 
+            this.mcmUser.AllowDrop = true;
+            this.mcmUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmPassword});
+            this.mcmUser.Name = "mcmUser";
+            this.mcmUser.Size = new System.Drawing.Size(153, 48);
+            // 
+            // tsmPassword
+            // 
+            this.tsmPassword.Name = "tsmPassword";
+            this.tsmPassword.Size = new System.Drawing.Size(152, 22);
+            this.tsmPassword.Text = "Alterar Senha";
+            this.tsmPassword.Click += new System.EventHandler(this.tsmPassword_Click);
             // 
             // pnlContainer
             // 
@@ -301,6 +380,7 @@
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnConfig
             // 
@@ -443,11 +523,16 @@
             this.Text = "Neptus System";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlPesquisar.ResumeLayout(false);
+            this.pnlPesquisar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFind)).EndInit();
+            this.pnlUser.ResumeLayout(false);
+            this.pnlUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.mcmUser.ResumeLayout(false);
             this.pnlContainer.ResumeLayout(false);
             this.shadowPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -461,12 +546,8 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlHeader;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox btnClose;
         private Util.NeptusControls.ShadowPanel shadowPanel1;
         private System.Windows.Forms.FlowLayoutPanel pnlModulo;
         private System.Windows.Forms.Panel panel2;
@@ -481,5 +562,15 @@
         private System.Windows.Forms.Label lblPrincipal;
         private Util.NeptusControls.ShadowPanel pnlContainer;
         private UcHome ucHome1;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.Panel pnlPesquisar;
+        private MetroFramework.Controls.MetroTextBox txtPesquisar;
+        private System.Windows.Forms.PictureBox picFind;
+        private System.Windows.Forms.Panel pnlUser;
+        private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.PictureBox picUser;
+        private MetroFramework.Controls.MetroContextMenu mcmUser;
+        private System.Windows.Forms.ToolStripMenuItem tsmPassword;
     }
 }

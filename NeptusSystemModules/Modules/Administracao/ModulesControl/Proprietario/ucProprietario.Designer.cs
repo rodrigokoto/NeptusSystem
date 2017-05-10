@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucProprietario));
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.txtDoc = new MetroFramework.Controls.MetroTextBox();
@@ -69,8 +69,6 @@
             this.lblFisica = new MetroFramework.Controls.MetroLabel();
             this.lblJuridica = new MetroFramework.Controls.MetroLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblEstado = new MetroFramework.Controls.MetroLabel();
-            this.txtEstado = new MetroFramework.Controls.MetroTextBox();
             this.dgrProprietario = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.clId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -423,7 +421,7 @@
             // 
             this.lblUf.AutoSize = true;
             this.lblUf.BackColor = System.Drawing.Color.Transparent;
-            this.lblUf.Location = new System.Drawing.Point(581, 433);
+            this.lblUf.Location = new System.Drawing.Point(339, 483);
             this.lblUf.Name = "lblUf";
             this.lblUf.Size = new System.Drawing.Size(25, 19);
             this.lblUf.TabIndex = 43;
@@ -499,7 +497,7 @@
             // cbxUF
             // 
             this.cbxUF.FormattingEnabled = true;
-            this.cbxUF.Location = new System.Drawing.Point(581, 455);
+            this.cbxUF.Location = new System.Drawing.Point(339, 505);
             this.cbxUF.Name = "cbxUF";
             this.cbxUF.Size = new System.Drawing.Size(61, 21);
             this.cbxUF.TabIndex = 13;
@@ -540,7 +538,7 @@
             // 
             // 
             this.txtCep.CustomButton.Image = null;
-            this.txtCep.CustomButton.Location = new System.Drawing.Point(214, 1);
+            this.txtCep.CustomButton.Location = new System.Drawing.Point(281, 1);
             this.txtCep.CustomButton.Name = "";
             this.txtCep.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtCep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -558,7 +556,7 @@
             this.txtCep.SelectionLength = 0;
             this.txtCep.SelectionStart = 0;
             this.txtCep.ShortcutsEnabled = true;
-            this.txtCep.Size = new System.Drawing.Size(236, 23);
+            this.txtCep.Size = new System.Drawing.Size(303, 23);
             this.txtCep.TabIndex = 12;
             this.txtCep.UseSelectable = true;
             this.txtCep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -742,47 +740,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstado.Location = new System.Drawing.Point(339, 481);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(48, 19);
-            this.lblEstado.TabIndex = 52;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.UseCustomBackColor = true;
-            // 
-            // txtEstado
-            // 
-            // 
-            // 
-            // 
-            this.txtEstado.CustomButton.Image = null;
-            this.txtEstado.CustomButton.Location = new System.Drawing.Point(281, 1);
-            this.txtEstado.CustomButton.Name = "";
-            this.txtEstado.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtEstado.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtEstado.CustomButton.TabIndex = 1;
-            this.txtEstado.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtEstado.CustomButton.UseSelectable = true;
-            this.txtEstado.CustomButton.Visible = false;
-            this.txtEstado.Lines = new string[0];
-            this.txtEstado.Location = new System.Drawing.Point(339, 503);
-            this.txtEstado.MaxLength = 150;
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.PasswordChar = '\0';
-            this.txtEstado.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtEstado.SelectedText = "";
-            this.txtEstado.SelectionLength = 0;
-            this.txtEstado.SelectionStart = 0;
-            this.txtEstado.ShortcutsEnabled = true;
-            this.txtEstado.Size = new System.Drawing.Size(303, 23);
-            this.txtEstado.TabIndex = 15;
-            this.txtEstado.UseSelectable = true;
-            this.txtEstado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtEstado.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // dgrProprietario
             // 
             this.dgrProprietario.AllowUserToAddRows = false;
@@ -790,19 +747,19 @@
             this.dgrProprietario.AllowUserToOrderColumns = true;
             this.dgrProprietario.AllowUserToResizeColumns = false;
             this.dgrProprietario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgrProprietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrProprietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgrProprietario.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgrProprietario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrProprietario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrProprietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrProprietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgrProprietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrProprietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clId,
@@ -979,8 +936,6 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgrProprietario);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblJuridica);
             this.Controls.Add(this.lblFisica);
             this.Controls.Add(this.chkjuridica);
@@ -1070,8 +1025,6 @@
         private MetroFramework.Controls.MetroLabel lblFisica;
         private MetroFramework.Controls.MetroLabel lblJuridica;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private MetroFramework.Controls.MetroLabel lblEstado;
-        private MetroFramework.Controls.MetroTextBox txtEstado;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgrProprietario;
         private System.Windows.Forms.DataGridViewTextBoxColumn clId;
         private System.Windows.Forms.DataGridViewTextBoxColumn clName;

@@ -85,7 +85,46 @@ namespace NeptusSystem.DAO
                 conn.Close();
             }
         }
-        public void AlterUser(User user) { }
+        public void ResetPassword(User user)
+        {
+            DBFactory factory = new DBFactory();
+
+            SqlConnection conn = factory.Conection();
+            SqlTransaction transaction = null;
+            SqlCommand command = conn.CreateCommand();
+
+            try
+            {
+                transaction = conn.BeginTransaction();
+
+                command.Transaction = transaction;
+
+                string updatecommand = @"UPDATE NPTLOGIN SET nptpassword = @nptpassword WHERE nptidlogin = @nptidlogin";
+
+                command.Parameters.AddWithValue("@nptpassword", user.Password);
+                command.Parameters.AddWithValue("@nptidlogin", user.IdUsuario);
+
+                command.CommandText = updatecommand;
+
+                command.ExecuteNonQuery();
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+
+                if (transaction != null)
+                    transaction.Rollback();
+                MessageBox.Show("Ocorreu um erro ao alterar os dados na tabela.\n" + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                throw;
+            }
+
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public void DeleteUser(User user) { }
     }
 }

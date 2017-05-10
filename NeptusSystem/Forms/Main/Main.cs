@@ -43,8 +43,6 @@ namespace NeptusSystem.Forms.Main
             MontarMenu();
         }
 
-
-
         private void MaximizedState()
         {
             var rectangle = Screen.FromControl(this).Bounds;
@@ -57,8 +55,7 @@ namespace NeptusSystem.Forms.Main
 
         private void CarregarSession()
         {
-            //lblUsuario.Text = session.SessionUser;
-
+            lblUser.Text = session.SessionUser;
         }
 
 
@@ -151,6 +148,26 @@ namespace NeptusSystem.Forms.Main
 
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            new Sobre().Show();
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+            mcmUser.Show(lblUser, 0, lblUser.Location.Y);
+        }
+
+        private void tsmPassword_Click(object sender, EventArgs e)
+        {
+            Login.Reset reset = new Login.Reset();
+
+            reset.Login = session.SessionUser;
+
+            reset.Show();
+            
+            
+        }
 
 
 
