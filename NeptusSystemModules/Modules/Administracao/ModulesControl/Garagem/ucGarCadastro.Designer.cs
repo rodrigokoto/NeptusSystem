@@ -38,6 +38,9 @@
             this.txtFim = new MetroFramework.Controls.MetroTextBox();
             this.btnAdicionar = new MetroFramework.Controls.MetroButton();
             this.grdGaragem = new MetroFramework.Controls.MetroGrid();
+            this.clBloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNrApart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlLoading = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,9 +48,6 @@
             this.lblcharIdent = new MetroFramework.Controls.MetroLabel();
             this.btnSalvar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.chkBox = new MetroFramework.Controls.MetroCheckBox();
-            this.clBloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNrApart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdGaragem)).BeginInit();
             this.pnlLoading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,6 +192,27 @@
             this.grdGaragem.Size = new System.Drawing.Size(385, 256);
             this.grdGaragem.TabIndex = 8;
             // 
+            // clBloco
+            // 
+            this.clBloco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clBloco.DividerWidth = 2;
+            this.clBloco.FillWeight = 147F;
+            this.clBloco.HeaderText = "Identificador";
+            this.clBloco.Name = "clBloco";
+            // 
+            // clNrApart
+            // 
+            this.clNrApart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clNrApart.DividerWidth = 2;
+            this.clNrApart.FillWeight = 147F;
+            this.clNrApart.HeaderText = "Garagem Nº";
+            this.clNrApart.Name = "clNrApart";
+            // 
+            // clBox
+            // 
+            this.clBox.HeaderText = "Box";
+            this.clBox.Name = "clBox";
+            // 
             // pnlLoading
             // 
             this.pnlLoading.Controls.Add(this.label1);
@@ -238,7 +259,7 @@
             this.lblcharIdent.Name = "lblcharIdent";
             this.lblcharIdent.Size = new System.Drawing.Size(18, 19);
             this.lblcharIdent.TabIndex = 14;
-            this.lblcharIdent.Text = "G";
+            this.lblcharIdent.Text = "H";
             this.lblcharIdent.UseCustomBackColor = true;
             // 
             // btnSalvar
@@ -285,27 +306,6 @@
             this.chkBox.TabIndex = 15;
             this.chkBox.Text = "Box";
             this.chkBox.UseSelectable = true;
-            // 
-            // clBloco
-            // 
-            this.clBloco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clBloco.DividerWidth = 2;
-            this.clBloco.FillWeight = 147F;
-            this.clBloco.HeaderText = "Identificador";
-            this.clBloco.Name = "clBloco";
-            // 
-            // clNrApart
-            // 
-            this.clNrApart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clNrApart.DividerWidth = 2;
-            this.clNrApart.FillWeight = 147F;
-            this.clNrApart.HeaderText = "Garagem Nº";
-            this.clNrApart.Name = "clNrApart";
-            // 
-            // clBox
-            // 
-            this.clBox.HeaderText = "Box";
-            this.clBox.Name = "clBox";
             // 
             // ucGarCadastro
             // 
