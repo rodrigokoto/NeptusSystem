@@ -169,6 +169,12 @@ namespace NeptusSystem.Forms.Main
             
         }
 
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            Configuracao config = new Configuracao();
+            AbrirUsercontrol(sender, e, config);
+        }
+
 
 
         //private void btnConfig_Click(object sender, EventArgs e)

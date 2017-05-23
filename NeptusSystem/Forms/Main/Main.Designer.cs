@@ -221,12 +221,12 @@
             this.mcmUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmPassword});
             this.mcmUser.Name = "mcmUser";
-            this.mcmUser.Size = new System.Drawing.Size(153, 48);
+            this.mcmUser.Size = new System.Drawing.Size(145, 26);
             // 
             // tsmPassword
             // 
             this.tsmPassword.Name = "tsmPassword";
-            this.tsmPassword.Size = new System.Drawing.Size(152, 22);
+            this.tsmPassword.Size = new System.Drawing.Size(144, 22);
             this.tsmPassword.Text = "Alterar Senha";
             this.tsmPassword.Click += new System.EventHandler(this.tsmPassword_Click);
             // 
@@ -416,6 +416,7 @@
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfig.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnConfig.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // btnRelatorios
             // 

@@ -46,7 +46,35 @@ namespace NeptusSystem.DAO
         }
         public List<User> ReturnUserList()
         {
-            return new List<User>();
+            DBFactory factory = new DBFactory();
+            SqlConnection conn = factory.Conection();
+            SqlCommand command = conn.CreateCommand();
+
+            command.CommandText = @"SELECT NPTIDLOGIN, NPTUSUARIO , NPTPASSWORD , NPTAREA , NPTACESSO FROM NPTLOGIN";
+
+            SqlDataReader rs = command.ExecuteReader();
+
+            List<User> lstUser = new List<User>();
+
+            while (rs.Read())
+            {
+                User user = new User();
+
+                user.IdUsuario = Convert.ToInt32(rs["NPTIDLOGIN"].ToString());
+                user.Usuario = rs["NPTUSUARIO"].ToString();
+                user.Password = rs["NPTPASSWORD"].ToString();
+                user.Area = rs["NPTAREA"].ToString();
+                user.Acesso = rs["NPTACESSO"].ToString();
+
+                lstUser.Add(user);
+                    
+            }
+
+            conn.Close();
+
+            return lstUser;
+
+            
         }
         public void CreateUser(User user)
         {
@@ -60,12 +88,14 @@ namespace NeptusSystem.DAO
             {
                 transaction = conn.BeginTransaction();
 
-                string insertCommand = @"insert into NPTLOGIN (nptusuario , nptpassword, nptarea , nptacesso) VALUES ('?', '?', '?', '?')";
+                command.Transaction = transaction;
 
-                command.Parameters.AddWithValue("nptusuario", user.Usuario);
-                command.Parameters.AddWithValue("nptpassword", user.Password);
-                command.Parameters.AddWithValue("nptarea", user.Area);
-                command.Parameters.AddWithValue("nptacesso", user.Acesso);
+                string insertCommand = @"insert into NPTLOGIN (nptusuario , nptpassword, nptarea , nptacesso) VALUES (@nptusuario, @nptpassword, @nptarea , @nptacesso)";
+
+                command.Parameters.AddWithValue("@nptusuario", user.Usuario);
+                command.Parameters.AddWithValue("@nptpassword", user.Password);
+                command.Parameters.AddWithValue("@nptarea", user.Area);
+                command.Parameters.AddWithValue("@nptacesso", Convert.ToInt32(user.Acesso));
 
                 command.CommandText = insertCommand;
                 command.ExecuteNonQuery();
